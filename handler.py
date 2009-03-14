@@ -1,5 +1,6 @@
 import os
 from main import users
+from google.appengine.ext import webapp
 
 from sys import version_info
 if version_info >= (2, 5):
@@ -55,7 +56,7 @@ class Handler(webapp.RequestHandler):
     doc = ElementTree.fromstring(self.request.body)
     for child in doc.getchildren():
       if child.tag in self.__class__.attributes:
-        if child.getchildren()
+        if child.getchildren():
           result[child.tag] = {}
           for c in child.getchildren():
             result[child.tag][c.tag] = c.text

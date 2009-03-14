@@ -1,4 +1,5 @@
 # ActionMailer::Base.delivery_method = :restful
+require 'actionmailer'
 
 class ActionMailer::RestfulMailer < ActionMailer::Base
   @@email_class = RestfulEmail::Email

@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'activeresource'
-require 'actionmailer'
 
 module RestfulEmail
   class Email < ActiveResource::Base
@@ -24,6 +23,6 @@ module RestfulEmail
       self.sender = d
     end
   
-    self.site = 'http://test:test@yourapp.appspot.com/'
+    self.site = 'http://test:test@localhost:8080/'
   end
 end
